@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Program
+namespace EncryptionWithFrames
 {
     static class Program
     {
@@ -15,7 +16,11 @@ namespace Program
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form());
+            //Application.Run(new Form2());
+            //Console.WriteLine(EncryptCode.Program.Run("alex2"));
+
+            //EncryptCode.Program.MainProg();
         }
     }
 }
