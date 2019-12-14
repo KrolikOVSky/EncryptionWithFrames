@@ -36,23 +36,24 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.InfoText;
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Impact", 22.2F);
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button2.Location = new System.Drawing.Point(264, 477);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(250, 64);
             this.button2.TabIndex = 0;
             this.button2.Text = "Decrypt";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.InfoText;
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Impact", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(12, 477);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(246, 64);
@@ -63,11 +64,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Desktop;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 14F);
-            this.textBox1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.textBox1.HideSelection = false;
             this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Multiline = true;
@@ -79,10 +79,10 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.InfoText;
+            this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Impact", 22.2F);
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button3.Location = new System.Drawing.Point(520, 477);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(250, 64);
@@ -95,7 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Desktop;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(782, 553);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox1);

@@ -38,5 +38,22 @@ namespace EncryptionWithFrames
             //else textBox1.Text = text;
             else textBox1.Text = Convert.ToString(EncryptCode.Program.Run(text));
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            String text = null;
+            Form3 form3 = new Form3();
+            form3.Text = "Decrypt";
+            form3.ShowDialog();
+
+            //textBox1.Text = Convert.ToString(EncryptCode.Program.Run("as"));
+            text = form3.getText();
+            if (text.Equals(""))
+            {
+                textBox1.Text = "No symbols was found";
+            }
+            //else textBox1.Text = text;
+            else textBox1.Text = Convert.ToString(EncryptCode.Program.Run(text));
+        }
     }
 }

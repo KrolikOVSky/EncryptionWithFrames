@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Program.Properties
+namespace EncryptionWithFrames.Properties
 {
 
 
