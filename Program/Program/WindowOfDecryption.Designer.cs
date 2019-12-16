@@ -1,6 +1,6 @@
 ﻿namespace EncryptionWithFrames
 {
-    partial class Form3
+    partial class WindowOfDecryption
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.OK_btn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.info_lbl = new System.Windows.Forms.Label();
+            this.Cancle_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // OK_btn
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 17F);
-            this.button1.Location = new System.Drawing.Point(12, 415);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 38);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "OK";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.OK_btn.Font = new System.Drawing.Font("Times New Roman", 17F);
+            this.OK_btn.Location = new System.Drawing.Point(12, 415);
+            this.OK_btn.Name = "OK_btn";
+            this.OK_btn.Size = new System.Drawing.Size(230, 38);
+            this.OK_btn.TabIndex = 0;
+            this.OK_btn.Text = "OK";
+            this.OK_btn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.OK_btn.UseVisualStyleBackColor = true;
+            this.OK_btn.Click += new System.EventHandler(this.OK_btn_Click);
             // 
             // textBox1
             // 
@@ -57,42 +57,38 @@
             this.textBox1.Size = new System.Drawing.Size(470, 323);
             this.textBox1.TabIndex = 1;
             // 
-            // label1
+            // info_lbl
             // 
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(470, 63);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Enter text for Encrypting";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.info_lbl.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.info_lbl.Location = new System.Drawing.Point(12, 9);
+            this.info_lbl.Name = "info_lbl";
+            this.info_lbl.Size = new System.Drawing.Size(470, 63);
+            this.info_lbl.TabIndex = 2;
+            this.info_lbl.Text = "Enter text for Encrypting";
+            this.info_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button2
+            // Cancle_btn
             // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 17F);
-            this.button2.Location = new System.Drawing.Point(248, 415);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(234, 38);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Cancle";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Cancle_btn.Font = new System.Drawing.Font("Times New Roman", 17F);
+            this.Cancle_btn.Location = new System.Drawing.Point(248, 415);
+            this.Cancle_btn.Name = "Cancle_btn";
+            this.Cancle_btn.Size = new System.Drawing.Size(234, 38);
+            this.Cancle_btn.TabIndex = 3;
+            this.Cancle_btn.Text = "Cancle";
+            this.Cancle_btn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Cancle_btn.UseVisualStyleBackColor = true;
+            this.Cancle_btn.Click += new System.EventHandler(this.Cancle_btn_Click);
             // 
-            // Form3
+            // WindowOfDecryption
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(494, 465);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Cancle_btn);
+            this.Controls.Add(this.info_lbl);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Name = "Form3";
-            this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
+            this.Controls.Add(this.OK_btn);
+            this.Name = "WindowOfDecryption";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,8 +97,8 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button OK_btn;
+        private System.Windows.Forms.Button Cancle_btn;
+        private System.Windows.Forms.Label info_lbl;
     }
 }

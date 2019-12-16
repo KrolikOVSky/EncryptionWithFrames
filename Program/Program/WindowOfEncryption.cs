@@ -17,15 +17,11 @@ namespace EncryptionWithFrames
             InitializeComponent();
         }
 
-        public String getText() { return EnterTextSpace.Text; }
+        public String GetText() { return EnterTextSpace.Text; }
 
         private void OK_btn_Click(object sender, EventArgs e)
         {
-            string str = "";
-            //if (comboBox1.Items[4].Equals(2)) EnterTextSpace.Text = "OK";
-            for (int i = 0; i <= 5; i++) str += String.Format("{0} \r\n",Convert.ToString(comboBox1.Items[i]));
-            //Close();
-            EnterTextSpace.Text = str;
+            Close();
         }
 
         private void Cancle_btn_Click(object sender, EventArgs e)

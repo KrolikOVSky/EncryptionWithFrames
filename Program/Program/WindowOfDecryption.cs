@@ -9,21 +9,22 @@ using System.Windows.Forms;
 
 namespace EncryptionWithFrames
 {
-    public partial class Form3 : System.Windows.Forms.Form
+    public partial class WindowOfDecryption : Form
     {
-        public Form3()
+        public WindowOfDecryption()
         {
             InitializeComponent();
         }
 
-        public String getText() { return textBox1.Text; }
+        public String GetText() { return textBox1.Text; }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        private void OK_btn_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Cancle_btn_Click(object sender, EventArgs e)
         {
             Close();
         }

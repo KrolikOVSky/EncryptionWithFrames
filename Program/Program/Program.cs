@@ -17,10 +17,6 @@ namespace EncryptionWithFrames
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainWindow());
-            //Application.Run(new WindowOfEncryption());
-            //Console.WriteLine(EncryptCode.Program.Run("alex2"));
-
-            //EncryptCode.Program.MainProg();
         }
     }
 }
