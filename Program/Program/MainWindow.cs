@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EncryptionWithFrames
 {
-    public partial class Form : System.Windows.Forms.Form
+    public partial class MainWindow : Form
     {
-        public Form()
+        public MainWindow()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace EncryptionWithFrames
         private void button1_Click(object sender, EventArgs e)
         {
             String text = null;
-            Form2 form2 = new Form2();
+            WindowOfEncryption form2 = new WindowOfEncryption();
             form2.Text = this.Text;
             form2.ShowDialog();
 
@@ -33,10 +33,14 @@ namespace EncryptionWithFrames
             text = form2.getText();
             if (text.Equals(""))
             {
-                textBox1.Text = "No symbols was found";
+                Space_for_code.Text = "No symbols was found";
             }
-            //else textBox1.Text = text;
-            else textBox1.Text = Convert.ToString(EncryptCode.Program.Run(text));
+            else
+            {
+                Space_for_code.Text = EncryptCode.Program.Code(EncryptCode.Program.CodeInArray(text));
+                Space_for_key.Text = EncryptCode.Program.Key(EncryptCode.Program.CodeInArray(text));
+                //textBox1.Text = EncryptCode.Program.Run
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -50,10 +54,17 @@ namespace EncryptionWithFrames
             text = form3.getText();
             if (text.Equals(""))
             {
-                textBox1.Text = "No symbols was found";
+                Space_for_code.Text = "No symbols was found";
             }
-            //else textBox1.Text = text;
-            else textBox1.Text = Convert.ToString(EncryptCode.Program.Run(text));
+            else
+            {
+                Space_for_code.Text = EncryptCode.Program.Code(EncryptCode.Program.CodeInArray(text));
+                Space_for_key.Text = EncryptCode.Program.Key(EncryptCode.Program.CodeInArray(text));
+                //textBox1.Text = EncryptCode.Program.Run
+            }
+            //else textBox1.Text = Convert.ToString(EncryptCode.Program.Run(text));
+
         }
+
     }
 }

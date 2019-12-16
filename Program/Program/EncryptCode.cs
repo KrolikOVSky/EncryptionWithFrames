@@ -4,7 +4,7 @@ namespace EncryptCode
 {
     public class Program
     {
-        private static char[] textToUnicode(string text)
+        private static char[] TextToUnicode(string text)
         {
             string codeString = "";
             char[] arr = text.ToCharArray();
@@ -17,7 +17,7 @@ namespace EncryptCode
             return code;
         }
 
-        private static void arrayList(char[,] array)
+        private static void ArrayList(char[,] array)
         {
             int length = array.GetLength(0);
             for (int i = 0; i < length; i++)
@@ -28,10 +28,9 @@ namespace EncryptCode
                 }
                 Console.WriteLine("");
             }
-            //Console.WriteLine();
         }
 
-        private static void arrayList2(char[] array)
+        private static void ArrayList2(char[] array)
         {
             int length = array.Length;
             for (int i = 0; i < length; i++)
@@ -41,7 +40,7 @@ namespace EncryptCode
             Console.WriteLine();
         }
 
-        private static void arrayList3(int[] array)
+        private static void ArrayList3(int[] array)
         {
             int length = array.GetLength(0);
             for (int i = 0; i < length; i++)
@@ -51,7 +50,7 @@ namespace EncryptCode
             Console.WriteLine();
         }
 
-        private static int arrayLength(char[] codeString)
+        private static int ArrayLength(char[] codeString)
         {
             int textLength = codeString.GetLength(0);
             double arrayLengthDouble = Math.Sqrt(textLength);
@@ -64,7 +63,7 @@ namespace EncryptCode
             return arrayLength;
         }
 
-        private static char[,] fillingOfArray(char[,] array, char[] code)
+        private static char[,] FillingOfArray(char[,] array, char[] code)
         {
             int textLength = code.Length;
             int arrayLength = array.GetLength(0);
@@ -88,11 +87,11 @@ namespace EncryptCode
                 }
             }
 
-            nameOfLinesColumns(array);
+            NameOfLinesColumns(array);
             return array;
         }
 
-        private static char[,] nameOfLinesColumns(char[,] a)
+        private static char[,] NameOfLinesColumns(char[,] a)
         {
             char letters = (char)65;
             int length = a.GetLength(0);
@@ -132,7 +131,7 @@ namespace EncryptCode
             return a;
         }
 
-        private static char[,] changeLines(char[,] array, int n, int m)
+        private static char[,] ChangeLines(char[,] array, int n, int m)
         {
             --n;
             --m;
@@ -147,7 +146,7 @@ namespace EncryptCode
             return array;
         }
 
-        private static char[,] changeColumns(char[,] array, int n, int m)
+        private static char[,] ChangeColumns(char[,] array, int n, int m)
         {
             --n;
             --m;
@@ -162,7 +161,7 @@ namespace EncryptCode
             return array;
         }
 
-        private static char[,] changeColumnsByKey(char[,] mainArray)
+        private static char[,] ChangeColumnsByKey(char[,] mainArray)
         {
             int length = mainArray.GetLength(0);
             char[,] array = new char[length, length];
@@ -182,7 +181,7 @@ namespace EncryptCode
             return array;
         }
 
-        private static char[,] changeLinesByKey(char[,] mainArray)
+        private static char[,] ChangeLinesByKey(char[,] mainArray)
         {
             int length = mainArray.GetLength(0);
             char[,] array = new char[length, length];
@@ -202,7 +201,7 @@ namespace EncryptCode
             return array;
         }
 
-        private static int random(int min, int max)
+        private static int Random(int min, int max)
         {
             int diff = max - min;
             Random random = new Random();
@@ -218,7 +217,7 @@ namespace EncryptCode
             int[] array = new int[length];
             for (int i = 0; i < length; i++)
             {
-                int r = random(1, length);
+                int r = Random(1, length);
                 int k = 0;
                 while (k < i)
                 {
@@ -229,7 +228,7 @@ namespace EncryptCode
                             k++;
                             continue;
                         }
-                        r = random(1, length);
+                        r = Random(1, length);
                         k = 0;
                     }
                 }
@@ -240,30 +239,49 @@ namespace EncryptCode
             return array;
         }
 
-        private static String ArrayToString(char[,] array)
+        public static String Code(char[,] array)
         {
-            String text = "";
+            String code = "";
             for(int i = 1; i < array.GetLength(0); i++)
             {
                 for(int j = 1; j < array.GetLength(1); j++)
                 {
                     if (array[i, j] == '\0') break;
-                    text += String.Format("{0}", array[i, j]);
+                    code += String.Format("{0}", array[i, j]);
                 }
             }
 
-            return text;
+            return code;
         }
 
-        public static String Run(String text)
+        public static string Key(char[,] array)
         {
-            char[] code = textToUnicode(text);
-            char[,] myArray = new char[arrayLength(code), arrayLength(code)];
-            fillingOfArray(myArray, code);
-            myArray = changeColumnsByKey(myArray);
-            myArray = changeLinesByKey(myArray);
+            String key = "";
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                if (array[i, 0] == '\0') continue;
+                key += String.Format("{0}", array[i, 0]);
+            }
+
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                if (array[0, i] == '\0') continue;
+                key += String.Format("{0}", array[0, i]);
+            }
+            return key;
+        }
+
+        public static char[,] CodeInArray(String text)
+        {
+            char[] code = TextToUnicode(text);
+            char[,] myArray = new char[ArrayLength(code), ArrayLength(code)];
+            FillingOfArray(myArray, code);
+            myArray = ChangeColumnsByKey(myArray);
+            myArray = ChangeLinesByKey(myArray);
+            //string txt = key(myArray);
+            //string codeTxt = ArrayToString(myArray);
+            return myArray;
             
-            return ArrayToString(myArray);
         }
     }
 }
